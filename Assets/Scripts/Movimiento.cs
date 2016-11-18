@@ -2,27 +2,23 @@
 using System.Collections;
 
 public class Movimiento : MonoBehaviour {
+ 
+    public float moveForce;
+    public float maxSpeed;
+    private Vector3 v;
 
-	private Rigidbody rb;
-	public float speed;
+    // Use this for initialization
+    void Start () {}
 
-	// Use this for initialization
-	void Start () {
+    void Update()
+    {
+        v = new Vector3(Input.GetAxis("Horizontal"),
+                Input.GetAxis("Vertical"), 0.0f);
+    }
 
-		rb = GetComponent<Rigidbody>(); 
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis ("Vertical");
-
-		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
-
-		rb.velocity = movement * speed;
-
-	}
+    void FixedUpdate()
+    {
+        GetComponent<Rigidbody2D>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody2D>().velocity, maxSpeed);
+        GetComponent<Rigidbody2D>().AddForce(v.normalized * moveForce); 
+    }
 }
