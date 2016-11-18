@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Movimiento : MonoBehaviour {
- 
-    //public float moveForce;
-    //public float maxSpeed;
+public class MoveUpdate : MonoBehaviour {
+
+	//public float moveForce;
+	//public float maxSpeed;
 	public float speed;
 	private Rigidbody2D rb;
-    private Vector3 v;
+	private Vector3 v;
 	Animator animator;
 
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
 
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
@@ -19,10 +19,10 @@ public class Movimiento : MonoBehaviour {
 	}
 
 
-    void Update()
-    {
-       // v = new Vector3(Input.GetAxis("Horizontal"),
-       //         Input.GetAxis("Vertical"), 0.0f);
+	void Update()
+	{
+		// v = new Vector3(Input.GetAxis("Horizontal"),
+		//         Input.GetAxis("Vertical"), 0.0f);
 
 		if (Input.GetKey (KeyCode.W)) {
 			transform.Translate (Vector2.up * speed * Time.deltaTime);
@@ -44,8 +44,8 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool ("Bool12", false);
 			animator.SetBool ("Idle", false);
 		}
-			else if (!Input.anyKey) {
-				animator.SetBool ("Idle", true);
+		else if (!Input.anyKey) {
+			animator.SetBool ("Idle", true);
 
 		}
 
@@ -67,9 +67,9 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool("Bool6", false);
 			animator.SetBool("Idle", false);
 		}
-			else if (!Input.anyKey){
-				animator.SetBool ("Idle", true);
-			
+		else if (!Input.anyKey){
+			animator.SetBool ("Idle", true);
+
 		}
 
 		if (Input.GetKey (KeyCode.A)){
@@ -91,8 +91,8 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool ("Bool10", true);
 			animator.SetBool("Idle", false);
 		}
-			else if (!Input.anyKey){
-				animator.SetBool ("Idle", true);
+		else if (!Input.anyKey){
+			animator.SetBool ("Idle", true);
 
 		}
 
@@ -116,18 +116,18 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool("Idle", false);
 		}
 
-			else if (!Input.anyKey){
-				animator.SetBool ("Idle", true);
+		else if (!Input.anyKey){
+			animator.SetBool ("Idle", true);
 		}
 
 
 
-    }
+	}
 
-    void FixedUpdate()
-    {
-       // GetComponent<Rigidbody2D>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody2D>().velocity, maxSpeed);
-       // GetComponent<Rigidbody2D>().AddForce(v.normalized * moveForce); 
+	void FixedUpdate()
+	{
+		// GetComponent<Rigidbody2D>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody2D>().velocity, maxSpeed);
+		// GetComponent<Rigidbody2D>().AddForce(v.normalized * moveForce); 
 
-   }
+	}
 }

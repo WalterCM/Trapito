@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Example.cs" />
      <Compile Include="Assets\Scripts\CenterCamera.cs" />
+     <Compile Include="Assets\Scripts\MoveUpdate.cs" />
      <Compile Include="Assets\Scripts\Movimiento.cs" />
      <Compile Include="Assets\Scripts\Read.cs" />
      <Compile Include="Assets\Scripts\colider.cs" />
