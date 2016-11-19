@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - clock
+  - aguja
+  - algodon
+  - lana
   layers:
   - Default
   - TransparentFX
