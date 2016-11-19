@@ -9,6 +9,8 @@ TagManager:
   - algodon
   - Lana
   - Item
+  - lana
+  - noquiero
   layers:
   - Default
   - TransparentFX
