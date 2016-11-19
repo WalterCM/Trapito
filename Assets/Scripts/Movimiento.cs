@@ -15,7 +15,6 @@ public class Movimiento : MonoBehaviour {
 
 		//rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
-
 	}
 
 
@@ -24,39 +23,38 @@ public class Movimiento : MonoBehaviour {
         v = new Vector3(Input.GetAxis("Horizontal"),
                 Input.GetAxis("Vertical"), 0.0f);
 
-		if (Input.GetKey (KeyCode.W)) {
+		if (Input.GetKey (KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
 			//transform.Translate (Vector2.up * speed * Time.deltaTime);
-			animator.SetBool ("Arriba", true);
-			animator.SetBool ("Derecha", false);
-			animator.SetBool ("Abajo", false);
-			animator.SetBool ("Izquierda", false);
-			animator.SetBool ("Bool7", true);
-			animator.SetBool ("Bool6", true);
-			animator.SetBool ("Bool9", true);
-			animator.SetBool ("Bool11",true);
-			animator.SetBool ("Bool8", false);
-			animator.SetBool ("Bool1", false);
-			animator.SetBool ("Bool2", false);
-			animator.SetBool ("Bool3", false);
-			animator.SetBool ("Bool4", false);
-			animator.SetBool ("Bool5", false);
-			animator.SetBool ("Bool10",false);
-			animator.SetBool ("Bool12", false);
-			animator.SetBool ("Idle", false);
+			animator.SetBool("Arriba", true);
+			animator.SetBool("Derecha", false);
+			animator.SetBool("Abajo", false);
+			animator.SetBool("Izquierda", false);
+			animator.SetBool("Bool7", true);
+			animator.SetBool("Bool6", true);
+			animator.SetBool("Bool9", true);
+			animator.SetBool("Bool11",true);
+			animator.SetBool("Bool8", false);
+			animator.SetBool("Bool1", false);
+			animator.SetBool("Bool2", false);
+			animator.SetBool("Bool3", false);
+			animator.SetBool("Bool4", false);
+			animator.SetBool("Bool5", false);
+			animator.SetBool("Bool10",false);
+			animator.SetBool("Bool12", false);
+			animator.SetBool("Idle", false);
 		}
 		else if (!Input.anyKey)
         {
-			animator.SetBool ("Idle", true);
+			animator.SetBool("Idle", true);
 		}
 
-
-		if (Input.GetKey (KeyCode.S)) 
+		if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) 
 		{
 			//transform.Translate(Vector2.down * speed * Time.deltaTime);
-			animator.SetBool ("Abajo", true);
-			animator.SetBool ("Derecha", false);
-			animator.SetBool ("Arriba", false);
-			animator.SetBool ("Izquierda", false);
+			animator.SetBool("Abajo", true);
+			animator.SetBool("Derecha", false);
+			animator.SetBool("Arriba", false);
+			animator.SetBool("Izquierda", false);
 			animator.SetBool("Bool1", true);
 			animator.SetBool("Bool2", true);
 			animator.SetBool("Bool8", true);
@@ -72,13 +70,14 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool ("Idle", true);
 		}
 
-		if (Input.GetKey (KeyCode.A)){
+		if (Input.GetKey (KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
 			//transform.Translate(Vector2.left * speed * Time.deltaTime);
 			animator.SetBool("Bool4", true);
-			animator.SetBool ("Izquierda", true);
-			animator.SetBool ("Derecha", false);
-			animator.SetBool ("Arriba", false);
-			animator.SetBool ("Abajo", false);
+			animator.SetBool("Izquierda", true);
+			animator.SetBool("Derecha", false);
+			animator.SetBool("Arriba", false);
+			animator.SetBool("Abajo", false);
 			animator.SetBool("Bool4", false);
 			animator.SetBool("Bool5", true);	
 			animator.SetBool("Bool1", false);
@@ -86,9 +85,9 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool("Bool3", false);
 			animator.SetBool("Bool6", false);
 			animator.SetBool("Bool7", true);
-			animator.SetBool ("Bool8", false);
-			animator.SetBool ("Bool9", false);
-			animator.SetBool ("Bool10", true);
+			animator.SetBool("Bool8", false);
+			animator.SetBool("Bool9", false);
+			animator.SetBool("Bool10", true);
 			animator.SetBool("Idle", false);
 		}
 		else if (!Input.anyKey)
@@ -96,14 +95,14 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool ("Idle", true);
 		}
 
-		if (Input.GetKey (KeyCode.D)) 
+		if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) 
 		{
 			//transform.Translate(Vector2.right * speed * Time.deltaTime);
 			animator.SetBool("Bool3", true);
-			animator.SetBool ("Derecha", true);
-			animator.SetBool ("Arriba", false);
-			animator.SetBool ("Abajo", false);
-			animator.SetBool ("Izquierda", false);
+			animator.SetBool("Derecha", true);
+			animator.SetBool("Arriba", false);
+			animator.SetBool("Abajo", false);
+			animator.SetBool("Izquierda", false);
 			animator.SetBool("Bool3", false);
 			animator.SetBool("Bool6", true);	
 			animator.SetBool("Bool1", false);
@@ -113,7 +112,7 @@ public class Movimiento : MonoBehaviour {
 			animator.SetBool("Bool7", true);
 			animator.SetBool("Bool8", false);
 			animator.SetBool("Bool11", false);
-			animator.SetBool ("Bool12", true);
+			animator.SetBool("Bool12", true);
 			animator.SetBool("Idle", false);
 		}
 		else if (!Input.anyKey)

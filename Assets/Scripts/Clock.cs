@@ -6,12 +6,8 @@ public class Clock : MonoBehaviour {
     public int firstNumber = 6;
     public int secondNumber = 57;
     private float elapsedTime = 0;
-    private GameObject clock;
 	// Use this for initialization
 	void Start () {
-        //GetComponent<TextMesh>().color = Color.black;
-
-
     }
 	
 	// Update is called once per frame
