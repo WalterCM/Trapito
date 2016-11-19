@@ -30,7 +30,7 @@ public class MoveUpdate : MonoBehaviour {
 			animator.SetBool ("Derecha", false);
 			animator.SetBool ("Abajo", false);
 			animator.SetBool ("Izquierda", false);
-			animator.SetBool ("Bool7", true);
+			animator.SetBool ("Bool7", false);
 			animator.SetBool ("Bool6", true);
 			animator.SetBool ("Bool9", true);
 			animator.SetBool ("Bool11",true);
@@ -79,16 +79,17 @@ public class MoveUpdate : MonoBehaviour {
 			animator.SetBool ("Derecha", false);
 			animator.SetBool ("Arriba", false);
 			animator.SetBool ("Abajo", false);
-			animator.SetBool("Bool4", false);
+			animator.SetBool("Bool4", true);
 			animator.SetBool("Bool5", true);	
 			animator.SetBool("Bool1", false);
 			animator.SetBool("Bool2", false);
 			animator.SetBool("Bool3", false);
 			animator.SetBool("Bool6", false);
-			animator.SetBool("Bool7", true);
+			animator.SetBool("Bool7", false);
 			animator.SetBool ("Bool8", false);
 			animator.SetBool ("Bool9", false);
 			animator.SetBool ("Bool10", true);
+			animator.SetBool ("Bool11", false);
 			animator.SetBool("Idle", false);
 		}
 		else if (!Input.anyKey){
@@ -103,13 +104,13 @@ public class MoveUpdate : MonoBehaviour {
 			animator.SetBool ("Arriba", false);
 			animator.SetBool ("Abajo", false);
 			animator.SetBool ("Izquierda", false);
-			animator.SetBool("Bool3", false);
+			animator.SetBool("Bool3", true);
 			animator.SetBool("Bool6", true);	
 			animator.SetBool("Bool1", false);
 			animator.SetBool("Bool2", false);
 			animator.SetBool("Bool5", false);
 			animator.SetBool("Bool4", false);
-			animator.SetBool("Bool7", true);
+			animator.SetBool("Bool7", false);
 			animator.SetBool("Bool8", false);
 			animator.SetBool("Bool11", false);
 			animator.SetBool ("Bool12", true);
