@@ -1,0 +1,37 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Items : MonoBehaviour {
+
+
+    private bool aguja=true;
+    private bool algodon=false;
+    private bool lana=false;
+    
+
+    // Use this for initialization
+    void Start () {       	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "aguja")
+        {
+            algodon = true;
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "algodon")
+        {
+            lana = true;
+            Destroy(other.gameObject);
+        }
+        else if (other.tag == "lana")
+        {
+            Destroy(other.gameObject);
+        }
+    }
+}

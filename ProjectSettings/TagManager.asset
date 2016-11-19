@@ -7,7 +7,8 @@ TagManager:
   - clock
   - aguja
   - algodon
-  - lana
+  - Lana
+  - Item
   layers:
   - Default
   - TransparentFX

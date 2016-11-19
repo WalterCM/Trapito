@@ -1,27 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Items : MonoBehaviour {
+public class Items2 : MonoBehaviour
+{
 
     public GameObject objeto;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
-        objeto.SetActive(true);
+            objeto.SetActive(true);
         Destroy(gameObject);
         Debug.Log("gg");
-            return;
-            
+        return;
+
     }
 
     // Use this for initialization
-    void Start () {       	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
+    void Start()
+    {
+    }
 
-    
+    // Update is called once per frame
+    void Update()
+    {
+    }
+
+
 }
+
